@@ -1,0 +1,1 @@
+ C:\\Users\\luqui\\OneDrive\\Área\ de\ Trabalho\\FACULDADE\\5-periodo\\computacao-movel\\flutter_application_1\\build\\ba1fabd0bcb75c25b0037be7a7ac1717\\dart_build_result.json: 
