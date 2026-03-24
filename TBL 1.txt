@@ -1,0 +1,9 @@
+1- 	o eixo coluna esta sendo centralizado
+	os textos estão sendo alinhados a esquerda
+2- 	implementa um espaço igual entre os itens
+	implementa espaço em volta dos itens
+3-	implementa o mesmo valor em todos os lados
+	permite implementar valores diferentes na horizontal e vertical
+	implementa valores específicos em lados determinados
+4-	não fica adaptado e intuitivo a alguns dispositivos, pode ficar pequeno demais
+	é possível utilizar a porcentagem da tela, 80% (width: largura * 0.8)
