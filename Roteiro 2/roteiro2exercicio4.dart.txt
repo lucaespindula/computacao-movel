@@ -1,0 +1,118 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Exercicio 4',
+      home: Tela1(),
+    );
+  }
+}
+
+class Tela1 extends StatefulWidget {
+  @override
+  _Tela1State createState() => _Tela1State();
+}
+
+class _Tela1State extends State<Tela1> {
+
+  int valor = 0;
+
+  void escolherNumero() async {
+
+    final resultado = await Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => Tela2()),
+    );
+
+    if (resultado != null) {
+      setState(() {
+        valor = resultado;
+      });
+    }
+
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Tela 1"),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+
+            Text(
+              "Valor atual: $valor",
+              style: TextStyle(fontSize: 24),
+            ),
+
+            SizedBox(height: 20),
+
+            ElevatedButton(
+              onPressed: escolherNumero,
+              child: Text("Escolher Número"),
+            ),
+
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class Tela2 extends StatelessWidget {
+
+  final TextEditingController controller = TextEditingController();
+
+  void enviarNumero(BuildContext context) {
+
+    int numero = int.tryParse(controller.text) ?? 0;
+
+    Navigator.pop(context, numero);
+
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Tela 2"),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+
+            SizedBox(
+              width: 300,
+              child: TextField(
+                controller: controller,
+                keyboardType: TextInputType.number,
+                decoration: InputDecoration(
+                  labelText: "Digite um número",
+                  border: OutlineInputBorder(),
+                ),
+              ),
+            ),
+
+            SizedBox(height: 20),
+
+            ElevatedButton(
+              onPressed: () => enviarNumero(context),
+              child: Text("Enviar"),
+            ),
+
+          ],
+        ),
+      ),
+    );
+  }
+}

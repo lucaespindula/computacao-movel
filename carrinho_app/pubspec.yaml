@@ -1,0 +1,13 @@
+name: carrinho_app
+description: App de carrinho com Provider
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  provider: ^6.0.5
+
+flutter:
+  uses-material-design: true
