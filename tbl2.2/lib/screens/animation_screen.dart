@@ -31,7 +31,7 @@ class _AnimationScreenState extends State<AnimationScreen> {
                     color: Colors.black26,
                     blurRadius: 10,
                     offset: Offset(0, 5),
-                  )
+                  ),
                 ],
               ),
             ),
@@ -39,7 +39,7 @@ class _AnimationScreenState extends State<AnimationScreen> {
             ElevatedButton(
               onPressed: () {
                 setState(() {
-                  tamanho = tamanho == 100 ? 250 : 100;
+                  tamanho = tamanho == 100 ? 450 : 100;
                 });
               },
               child: const Text("Aumentar / Diminuir"),

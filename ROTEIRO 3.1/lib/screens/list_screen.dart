@@ -5,7 +5,11 @@ class ListScreen extends StatelessWidget {
   const ListScreen({super.key});
 
   final List<String> produtos = const [
-    "Arroz", "Feijão", "Macarrão", "Leite", "Café"
+    "Arroz",
+    "Feijão",
+    "Macarrão",
+    "Leite",
+    "Café",
   ];
 
   @override
@@ -15,9 +19,7 @@ class ListScreen extends StatelessWidget {
       body: ListView.builder(
         itemCount: produtos.length,
         itemBuilder: (context, index) {
-          return ProductTile(
-            nome: produtos[index],
-          );
+          return ProductTile(nome: produtos[index]);
         },
       ),
     );
